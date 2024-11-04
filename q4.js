@@ -3,22 +3,31 @@ Peça ao usuário para inserir três notas (usando prompt), calcule a média e e
 aprovado ou reprovado (a média para aprovação é 7). Exemplo de saída:
 Sua média é 6.5. Você foi reprovado. */
 
-function avg(notas){
-
-    for(let i = 0; i < notas.length; i++){
-
-        let soma = 0
-        soma += notas[i]
-
-    }
-
-    return soma/notas.length
-
+function avg(nota1, nota2, nota3) {
+  return (nota1 + nota2 + nota3) / 3;
 }
 
-let notas = [prompt('Digite uma nota:'), prompt('Digite outra nota:'), prompt('Digite outra nota:')]
+function evaluate(media) {
+  if (media >= 7) {
+    return "aprovado!";
+  } else {
+    return "reprovado!";
+  }
+}
 
-texto = document.querySelector('#avg')
+let nota1 = Number.parseFloat(prompt("Digite uma nota:"));
+let nota2 = Number.parseFloat(prompt("Digite uma nota:"));
+let nota3 = Number.parseFloat(prompt("Digite uma nota:"));
 
-texto.innerHTML = ''
-texto.innerHTML = 'Sua média final é ' + avg(notas)
+let media = avg(nota1, nota2, nota3);
+
+texto = document.querySelector("#avg");
+
+texto.innerHTML = "";
+texto.innerHTML +=
+  "<p>Sua média final é " +
+  media +
+  "</p>" +
+  "<p>Você foi " +
+  evaluate(media) +
+  "</p>";
