@@ -35,12 +35,12 @@ function calculadora(operation, n1, n2) {
   }
 }
 
-let a = document.querySelector('#result')
+var a = document.querySelector('#result')
 
 
-let n1 = Number.parseFloat(prompt('Digite um número'))
-let n2 = Number.parseFloat(prompt('Digite um número'))
-let operation =  prompt('Digite uma operação').toUpperCase()
+var n1 = Number.parseFloat(prompt('Digite um número'))
+var n2 = Number.parseFloat(prompt('Digite um número'))
+var operation =  prompt('Digite uma operação').toUpperCase()
 
 
 
